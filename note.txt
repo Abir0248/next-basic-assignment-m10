@@ -1,0 +1,37 @@
+Next.js Starter Project Folder Structure:
+
+1. pages/
+
+This directory is core to the functionality of Next.js. Every JavaScript (or TypeScript) file in this directory becomes an automatically routed page in the app.
+
+    _app.js: This is a custom App component. It allows you to override the default App component provided by Next.js to initialize pages. You can apply shared components or styles across all routes, such as a navigation bar, using this file.
+
+    index.js: Represents the main homepage (root route) of the application. When you visit your site's root URL, the code and rendering logic within this file will be used.
+
+    _document.js (not in the default starter but commonly used): Allows you to augment the app's HTML and body tags. Useful for adding attributes or integrating external resources.
+
+2. public/
+
+    The public directory serves as the base path for serving static assets. Unlike assets in the pages/ or other directories, files here aren't processed by Webpack. They are served as-is to the browser.
+
+    For instance, if you have an image named background.png inside the public directory, you'd reference it in your code like so: <img src="/background.png" />.
+
+3. styles/
+
+Next.js allows you to import stylesheets into your JS/TS files. This directory holds those styles.
+
+    globals.css: This stylesheet holds global styles that are applied across your entire app. For instance, you might put default styles or resets here.
+
+    Home.module.css: This is a CSS Module, a CSS file in which all class names and animation names are scoped locally by default. Using CSS Modules, you can write modular and maintainable CSS. The naming convention [name].module.css is required for Next.js to treat it as a CSS module.
+
+4. .gitignore
+
+    This file is used by Git to determine which files and directories to ignore when making commits. Commonly ignored files include node_modules/, build directories, .env files with secrets, etc.
+
+5. package.json
+
+    An essential file for Node.js projects, it holds metadata about the project, lists its dependencies, and can contain scripts that automate common tasks (like starting your Next.js app in development mode).
+
+6. README.md
+
+    A markdown file that provides documentation about the project. It's a good place to put setup instructions, describe the project's purpose, and provide any other pertinent information for developers or users.
